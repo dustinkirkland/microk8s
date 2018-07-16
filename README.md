@@ -59,6 +59,12 @@ These addons can be disabled at anytime using the `disable` command
 microk8s.disable dashboard dns
 ```
 
+You may need to adjust your local machine's firewall setting in order to communicate with dns and/or the dashboard.  If you're using ufw, you may need to run:
+
+```
+sudo ufw allow in on cbr0 && sudo ufw allow out on cbr0
+```
+
 You can find the addon manifests and/or scripts under `${SNAP}/actions/`, with `${SNAP}` pointing by default to `/snap/microk8s/current`.
 
 #### List of available addons
